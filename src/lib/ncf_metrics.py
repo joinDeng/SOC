@@ -1,20 +1,30 @@
-import json, os
+import json
+import os
 import argparse
+import h5py
 
 
 def main():
     parse = argparse.ArgumentParser()
-    parse.add_argument('--ncf_dir', type=str, required=True, help='ncf dataset director')
-    parse.add_argument('--json_file', type=str, default='space_object_metrics.json', help='metrics json file')
+    parse.add_argument('--ncf_hdf5', type=str, required=True, help='ncf dataset file')
+    parse.add_argument('--metrics_json', type=str, default='space_object_metrics.json', help='metrics json file')
     args = parse.parse_args()
-    metrics_json = args.json_file
-    ncf_dir = args.ncf_dir
+    ncf_hdf5 = args.ncf_hdf5
+    metrics_json = args.metrics_json
 
+    ncf_ids = set()
+    with h5py.File(ncf_hdf5, 'r') as h5f:
+        for key in h5f.keys():
+            if key not in ncf_ids:
+                ncf_ids.add(key)
     metrics = json.load(open(metrics_json))
-    ncf_ids = {f.split('_')[1].split('.')[0] for f in os.listdir(ncf_dir) if f.startswith('NoradCatID_')}
+
+    # 先清空has_ncf记录，再更新
+    for m in metrics:
+        m['has_ncf'] = False
     for m in metrics:
         m['has_ncf'] = m['norad_id'] in ncf_ids
-    json.dump(metrics, open('tle_metrics.json', 'w'), indent=2)
+    json.dump(metrics, open(metrics_json, 'w'), indent=2)
 
 
 if __name__ == '__main__':

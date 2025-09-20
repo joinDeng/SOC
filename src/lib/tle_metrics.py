@@ -12,6 +12,7 @@ from collections import defaultdict
 ALPHA = 0.15      # 类别可靠性衰减系数
 BETA  = 0.15      # RCS  可靠性衰减系数
 RE    = 6378.137  # 地球赤道半径 km
+DATE_FMT = "%Y-%m-%dT%H:%M:%S.%f"
 
 
 # ---------- 工具函数 ----------
@@ -23,24 +24,26 @@ def calc_height(a, e):
 
 
 def reliability_score(switch_cnt, unknown_ratio, gamma):
+    # 可靠性和标签变化频率和未知标签占比有关
     return np.exp(-gamma * switch_cnt) * (1 - unknown_ratio)
 
 
 # ---------- 指标计算器 ----------
 class TLEMetrics:
     def __init__(self, file_path):
-        self.df = pd.read_csv(file_path, skipinitialspace=True)
-        self.df['EPOCH'] = pd.to_datetime(self.df['EPOCH'])
+        self.df = pd.read_csv(file_path, sep=',\s*', engine='python')
+        self.df['EPOCH'] = pd.to_datetime(self.df['EPOCH'], format=DATE_FMT)
         self.df = self.df.sort_values('EPOCH')  # 时间序
         self.norad_id = os.path.basename(file_path).split('_')[1].split('.')[0]
 
     # ---- 类别通道 ----
     def cat_metrics(self):
-        s = self.df['OBJECT_TYPE'].str.lower()
+        s = self.df['OBJECT_TYPE'].astype(object).str.lower()
         valid = s[s.isin(['payload', 'rocket body', 'debris'])]
         switch = (valid != valid.shift()).sum() - 1
         switch = int(max(0, switch))
-        unk_ratio = s.isin(['unknown', 'tba', 'tbd', 'null', '']).mean()
+        length = len(s)
+        unk_ratio = (~s.isin(['payload', 'rocket body', 'debris'])).mean()
         final = valid.iloc[-1] if len(valid) else 'unknown'
         R = reliability_score(switch, unk_ratio, ALPHA)
         return {
@@ -52,12 +55,12 @@ class TLEMetrics:
 
     # ---- RCS 通道 ----
     def rcs_metrics(self):
-        s = self.df['RCS_SIZE'].str.lower()
+        s = self.df['RCS_SIZE'].astype(object).str.lower()
         # valid = s[~s.isin(['unknown', ''])]
         valid = s[s.isin(['small', 'medium', 'large'])]
         switch = (valid != valid.shift()).sum() - 1
         switch = int(max(0, switch))
-        unk_ratio = s.isin(['unknown', 'tba', 'tbd', 'null', '']).mean()
+        unk_ratio = (~s.isin(['small', 'medium', 'large'])).mean()
         final = valid.iloc[-1] if len(valid) else 'unknown'
         R = reliability_score(switch, unk_ratio, BETA)
         return {

@@ -1,0 +1,50 @@
+[
+  {
+    "norad_id": "03369",
+    "final_cat": "debris",
+    "cat_switches": 0,
+    "cat_unknown_ratio": 0.974,
+    "cat_reliability": 0.026,
+    "final_rcs": "unknown",
+    "rcs_switches": 0,
+    "rcs_unknown_ratio": 1.0,
+    "rcs_reliability": 0.0,
+    "perigee_height": 267.7,
+    "apogee_height": 295.5,
+    "mean_height": 281.6,
+    "eccentricity": 0.002085,
+    "has_ncf": null
+  },
+  {
+    "norad_id": "26313",
+    "final_cat": "debris",
+    "cat_switches": 0,
+    "cat_unknown_ratio": 0.001,
+    "cat_reliability": 0.999,
+    "final_rcs": "small",
+    "rcs_switches": 0,
+    "rcs_unknown_ratio": 0.001,
+    "rcs_reliability": 0.999,
+    "perigee_height": 670.2,
+    "apogee_height": 791.2,
+    "mean_height": 730.7,
+    "eccentricity": 0.00851,
+    "has_ncf": null
+  },
+  {
+    "norad_id": "26314",
+    "final_cat": "debris",
+    "cat_switches": 0,
+    "cat_unknown_ratio": 0.0,
+    "cat_reliability": 1.0,
+    "final_rcs": "small",
+    "rcs_switches": 0,
+    "rcs_unknown_ratio": 0.0,
+    "rcs_reliability": 1.0,
+    "perigee_height": 224.3,
+    "apogee_height": 265.4,
+    "mean_height": 244.9,
+    "eccentricity": 0.003104,
+    "has_ncf": null
+  }
+]

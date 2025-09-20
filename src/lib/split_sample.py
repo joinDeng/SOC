@@ -24,17 +24,17 @@ def load_metrics(path):
 def add_orbit_class(df):
     """按平均高度分 LEO/MEO/GEO"""
     conditions = [
-        df['mean_height'] < 2000,
-        df['mean_height'] < 20000
+        df['mean_height'] < 1200,  #  200--1200 km
+        df['mean_height'] < 35500  # 1200--36000
     ]
     choices = ['LEO', 'MEO']
-    df['orbit_class'] = np.select(conditions, choices, default='GEO')
+    df['orbit_class'] = np.select(conditions, choices, default='HEO')
     return df
 
 
 def time_split(df, ratios=SPLIT_RATIOS):
     """按 first_date 时间排序后切分"""
-    df = df.sort_values('first_date')
+    df = df.sort_values('t')
     n = len(df)
     n_train = int(n * ratios[0])
     n_val   = int(n * ratios[1])

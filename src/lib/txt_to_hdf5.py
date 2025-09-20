@@ -41,7 +41,7 @@ def parse_one_object(dir_name: str, root: str):
         orbit_path= os.path.join(orbit_dir, orbit_txt)
 
         # ---- 2. 读取、对齐（同旧脚本） ----
-        ncf_df  = pd.read_csv(ncf_path,  header=None, names=["datetime","ncf_x","ncf_y","ncf_z"], skiprows=1, sep='\s*,\s*', engine='python')
+        ncf_df  = pd.read_csv(ncf_path,  header=None, names=["datetime","ncf_x","ncf_y","ncf_z"], skiprows=1, sep=',\s*', engine='python')
         orbit_df= pd.read_csv(orbit_path,header=None, names=["datetime","pos_x","pos_y","pos_z","vel_x","vel_y","vel_z"], skiprows=1, sep='\s*,\s*', engine='python')
         ncf_df["datetime"]  = pd.to_datetime(ncf_df["datetime"], format=DATE_FMT)
         orbit_df["datetime"]= pd.to_datetime(orbit_df["datetime"], format=DATE_FMT)
@@ -94,41 +94,10 @@ def main():
                 continue
             norad_id = res["norad_id"]
             grp = h5f.create_group(norad_id)
-            grp.attrs["label"] = res["label"]  # 🔧 把类别存成属性
             grp.create_dataset("t", data=res["t"], compression="gzip", compression_opts=9)
             grp.create_dataset("pos", data=res["pos"], compression="gzip", compression_opts=9)
             grp.create_dataset("vel", data=res["vel"], compression="gzip", compression_opts=9)
             grp.create_dataset("ncf", data=res["ncf"], compression="gzip", compression_opts=9)
-
-# def main():
-#     # ---- 1. 扫描所有 NORAD ID ----
-#     root = "D:\\app\\program\\Python\\Pycharm\\project\\SOC\\data"
-#     all_ids = [d for d in os.listdir(root) if os.path.isdir(os.path.join(root, d))]
-#     print(f"[INFO] 找到 {len(all_ids)} 个 NORAD ID")
-#
-#     # ---- 2. 多进程解析 ----
-#     with Pool() as pool:
-#         results = list(tqdm(pool.map(lambda x: parse_one_object(x, root), all_ids), total=len(all_ids)))
-#     pool.close()
-#     pool.join()
-#
-#     # ---- 3. 过滤失败的 ----
-#     results = [r for r in results if r is not None]
-#     print(f"[INFO] 成功解析 {len(results)} 个目标")
-#
-#     # ---- 4. 写入 HDF5 ----
-#     out = "D:\\app\\program\\Python\\Pycharm\\project\\SOC\\dataset\\space.h5"
-#     with h5py.File(out, "w") as h5f:
-#         for res in tqdm(results):
-#             if res is None:
-#                 continue
-#             norad_id = res["norad_id"]
-#             grp = h5f.create_group(norad_id)
-#             grp.attrs["label"] = res["label"]  # 🔧 把类别存成属性
-#             grp.create_dataset("t", data=res["t"], compression="gzip", compression_opts=9)
-#             grp.create_dataset("pos", data=res["pos"], compression="gzip", compression_opts=9)
-#             grp.create_dataset("vel", data=res["vel"], compression="gzip", compression_opts=9)
-#             grp.create_dataset("ncf", data=res["ncf"], compression="gzip", compression_opts=9)
 
 
 if __name__ == "__main__":
