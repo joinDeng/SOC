@@ -28,6 +28,37 @@ def reliability_score(switch_cnt, unknown_ratio, gamma):
     return np.exp(-gamma * switch_cnt) * (1 - unknown_ratio)
 
 
+def determine_final_label(series, time_series=None, alpha=0.1):
+    """
+    根据时间加权投票确定最终标签。
+    series: pd.Series of labels
+    time_series: pd.Series of datetime indices (如果为None，则假设等间距)
+    alpha: 时间衰减系数
+    """
+    if time_series is None:
+        # 如果没有时间信息，使用简单众数
+        return series.mode()[0] if not series.mode().empty else 'unknown'
+
+    # 计算时间权重
+    max_time = time_series.max()
+    weights = np.exp(-alpha * (max_time - time_series).dt.total_seconds() / 86400)  # 衰减以天为单位
+
+    # 创建加权投票
+    vote_dict = {}
+    cats = ['payload', 'rocket body', 'debris'] + ['small', 'medium', 'large']
+    for label, weight in zip(series, weights):
+        if label not in cats:
+            continue
+        if label not in vote_dict:
+            vote_dict[label] = 0.0
+        vote_dict[label] += weight
+
+    if not vote_dict:
+        return 'unknown'
+
+    return max(vote_dict.items(), key=lambda x: x[1])[0]
+
+
 # ---------- 指标计算器 ----------
 class TLEMetrics:
     def __init__(self, file_path):

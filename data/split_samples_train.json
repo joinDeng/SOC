@@ -1,0 +1,3445 @@
+[
+  {
+    "norad_id": "00011",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00011",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00011",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00011",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00011",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00011",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "03673",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "03673",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "03673",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "03673",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "03673",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "03673",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "03673",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00012",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": true,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00012",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": true,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00012",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": true,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00012",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": true,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00012",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": true,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00012",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": true,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00012",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": true,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00012",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": true,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00012",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": true,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00012",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": true,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00012",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": true,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00012",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": true,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00012",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": true,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00012",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": true,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00012",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": true,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00012",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": true,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00012",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": true,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00012",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": true,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00022",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00022",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00022",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00022",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00022",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00022",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00046",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00046",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00046",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00046",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00046",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00046",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00107",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00107",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00107",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00107",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00107",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00107",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00117",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00117",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00117",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00117",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00117",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00117",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00047",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "00047",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "00047",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "00047",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "00047",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "00047",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "00059",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "00059",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "00059",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "00059",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "00059",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "00059",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "04784",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "04784",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "04784",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "04784",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "04784",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "04784",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "04784",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07095",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07095",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07095",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07095",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07095",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07095",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07095",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "04205",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "04205",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "04205",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "04205",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "04205",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "04205",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "04205",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "06843",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "06843",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "06843",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "06843",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "06843",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "06843",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "06843",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "05225",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "05225",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "05225",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "05225",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "05225",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "05225",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "05225",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03932",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03932",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03932",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03932",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03932",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03932",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03932",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "00805",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "00805",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "00805",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "00805",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "00805",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "00805",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "00805",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "00120",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00120",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00120",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00120",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00120",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00120",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00121",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00121",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00121",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00121",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00121",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00121",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00122",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00122",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00122",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00122",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00122",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00122",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00130",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00130",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00130",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00130",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00130",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00130",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00132",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00132",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00132",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00132",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00132",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00132",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00154",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00154",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00154",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00154",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00154",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "00154",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "04716",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "04716",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "04716",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "04716",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "04716",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "04716",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "04716",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "01359",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "01359",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "01359",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "01359",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "01359",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "01359",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "01359",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "04391",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "04391",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "04391",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "04391",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "04391",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "04391",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "04391",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07273",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07273",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07273",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07273",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07273",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07273",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07273",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07284",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07284",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07284",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07284",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07284",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07284",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "07284",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "rocket body",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "02531",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "02531",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "02531",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "02531",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "02531",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "02531",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "02531",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "07021",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "07021",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "07021",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "07021",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "07021",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "07021",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "07021",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08146",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08146",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08146",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08146",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08146",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08146",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08146",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08172",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08172",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08172",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08172",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08172",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08172",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08172",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08177",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08177",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08177",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08177",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08177",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08177",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "08177",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "medium"
+    }
+  },
+  {
+    "norad_id": "03748",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03748",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03748",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03748",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03748",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03748",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03748",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03814",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03814",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03814",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03814",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03814",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03814",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "03814",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "05028",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "05028",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "05028",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "05028",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "05028",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "05028",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "05028",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "06213",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "06213",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "06213",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "06213",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "06213",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "06213",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "06213",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "07058",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "07058",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "07058",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "07058",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "07058",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "07058",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "07058",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08137",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08137",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08137",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08137",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08137",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08137",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08137",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08303",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08303",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08303",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08303",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08303",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08303",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08303",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08403",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08403",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08403",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08403",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08403",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08403",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08403",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08562",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08562",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08562",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08562",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08562",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08562",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08562",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08791",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08791",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08791",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08791",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08791",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08791",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "08791",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "09822",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "09822",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "09822",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "09822",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "09822",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "09822",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "09822",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "MEO",
+      "final_cat": "debris",
+      "final_rcs": "small"
+    }
+  },
+  {
+    "norad_id": "05683",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "05683",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "05683",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "05683",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "05683",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "05683",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "05683",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "08799",
+    "start_idx": 0,
+    "end_idx": 1440,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "08799",
+    "start_idx": 1440,
+    "end_idx": 2880,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "08799",
+    "start_idx": 2880,
+    "end_idx": 4320,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "08799",
+    "start_idx": 4320,
+    "end_idx": 5760,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "08799",
+    "start_idx": 5760,
+    "end_idx": 7200,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "08799",
+    "start_idx": 7200,
+    "end_idx": 8640,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "large"
+    }
+  },
+  {
+    "norad_id": "08799",
+    "start_idx": 8640,
+    "end_idx": 10080,
+    "aug_noise": false,
+    "grid": {
+      "orbit_class": "LEO",
+      "final_cat": "payload",
+      "final_rcs": "large"
+    }
+  }
+]

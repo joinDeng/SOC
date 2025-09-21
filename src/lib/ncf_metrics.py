@@ -6,7 +6,7 @@ import h5py
 
 def main():
     parse = argparse.ArgumentParser()
-    parse.add_argument('--ncf_hdf5', type=str, required=True, help='ncf dataset file')
+    parse.add_argument('--ncf_hdf5', type=str, required=True, help='ncf data file')
     parse.add_argument('--metrics_json', type=str, default='space_object_metrics.json', help='metrics json file')
     args = parse.parse_args()
     ncf_hdf5 = args.ncf_hdf5
