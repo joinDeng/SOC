@@ -21,21 +21,12 @@ def slide_window(T, window_length, slide_step):
 
 
 def main():
-    # parser = argparse.ArgumentParser(description='构建样本级索引')
-    # parser.add_argument('--h5_file', required=True, help='原始HDF5文件路径')
-    # parser.add_argument('--selected_ids', required=True, help='选中的ID列表文件路径')
-    # parser.add_argument('--rare_ids', required=True, help='稀缺ID列表文件路径')
-    # parser.add_argument('--metrics', required=True, help='metrics文件路径')
-    # parser.add_argument('--output', required=True, help='输出样本索引文件路径')
-    # parser.add_argument('--config', default='../config/pipeline_config.json', help='配置文件路径')
-
     parser = argparse.ArgumentParser(description='构建样本级索引')
-    file_required = '../../data/space_object_metrics.json'
-    parser.add_argument('--h5_file', default='../../data/space.h5', help='原始HDF5文件路径')
-    parser.add_argument('--selected_ids', default='../../data/selected_object_ids.json', help='选中的ID列表文件路径')
-    parser.add_argument('--rare_ids', default='../../data/rare_object_ids.json', help='稀缺ID列表文件路径')
-    parser.add_argument('--metrics', default='../../data/space_object_metrics.json', help='metrics文件路径')
-    parser.add_argument('--output', default='../../data/sample_index.json', help='输出样本索引文件路径')
+    parser.add_argument('--h5_file', required=True, help='原始HDF5文件路径')
+    parser.add_argument('--selected_ids', required=True, help='选中的ID列表文件路径')
+    parser.add_argument('--rare_ids', required=True, help='稀缺ID列表文件路径')
+    parser.add_argument('--metrics', required=True, help='metrics文件路径')
+    parser.add_argument('--output', required=True, help='输出样本索引文件路径')
     parser.add_argument('--config', default='../config/pipeline_config.json', help='配置文件路径')
 
     args = parser.parse_args()
