@@ -92,7 +92,7 @@ if __name__ == '__main__':
     dataset = NCFDataset(folder_path, normalize=False, statistic=False, frequency=False)
 
     # NCF 样例
-    # show_sample(dataset)
+    # show_sample(data)
 
     # 参数设置
     seed = random.seed(0)

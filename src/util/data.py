@@ -242,7 +242,7 @@ def LargeNCFDataset(data_folder, shuffle=False, normalize=True):
 
 
 def test():
-    folder_path = r"D:\app\program\Python\Pycharm\project\SOC\data"
+    folder_path = r"/data"
     dataset = NCFDataset(folder_path)
     print(dataset.statistic_data['sos_ncf']['mean'][:5])
     print(dataset.ncf_data[:5][:, :3])
