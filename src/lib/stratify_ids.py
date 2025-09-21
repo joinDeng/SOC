@@ -41,12 +41,6 @@ def main():
     parser.add_argument('--rare_output', required=True, help='输出稀缺ID列表文件路径')
     parser.add_argument('--config', default='../config/pipeline_config.json', help='配置文件路径')
 
-    # parser = argparse.ArgumentParser(description='分层抽样NORAD ID')
-    # parser.add_argument('--metrics', default='../../data/space_object_metrics.json', help='输入metrics文件路径')
-    # parser.add_argument('--output', default='../../data/selected_object_ids.json', help='输出选中的ID列表文件路径')
-    # parser.add_argument('--rare_output', default='../../data/rare_object_ids.json', help='输出稀缺ID列表文件路径')
-    # parser.add_argument('--config', default='../config/pipeline_config.json', help='配置文件路径')
-
     args = parser.parse_args()
 
     # 加载配置

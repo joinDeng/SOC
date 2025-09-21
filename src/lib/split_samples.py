@@ -18,16 +18,10 @@ def get_center_time(grp, start_idx, end_idx):
 
 
 def main():
-    # parser = argparse.ArgumentParser(description='时间划分样本')
-    # parser.add_argument('--h5_file', required=True, help='原始HDF5文件路径')
-    # parser.add_argument('--sample_index', required=True, help='样本索引文件路径')
-    # parser.add_argument('--output_prefix', required=True, help='输出文件前缀')
-    # parser.add_argument('--config', default='../config/pipeline_config.json', help='配置文件路径')
-
     parser = argparse.ArgumentParser(description='时间划分样本')
-    parser.add_argument('--h5_file', default='../../data/space.h5', help='原始HDF5文件路径')
-    parser.add_argument('--sample_index', default='../../data/sample_index.json', help='样本索引文件路径')
-    parser.add_argument('--output_prefix', default='../../data/split_samples', help='输出文件前缀')
+    parser.add_argument('--h5_file', required=True, help='原始HDF5文件路径')
+    parser.add_argument('--sample_index', required=True, help='样本索引文件路径')
+    parser.add_argument('--output_prefix', required=True, help='输出文件前缀')
     parser.add_argument('--config', default='../config/pipeline_config.json', help='配置文件路径')
 
     args = parser.parse_args()

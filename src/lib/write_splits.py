@@ -12,18 +12,11 @@ from tqdm import tqdm
 
 
 def main():
-    # parser = argparse.ArgumentParser(description='生成HDF5数据集')
-    # parser.add_argument('--h5_file', required=True, help='原始HDF5文件路径')
-    # parser.add_argument('--sample_index', required=True, help='样本索引文件路径')
-    # parser.add_argument('--split_name', required=True, choices=['train', 'val', 'test'], help='数据集名称')
-    # parser.add_argument('--output', required=True, help='输出HDF5文件路径')
-    # parser.add_argument('--config', default='../config/pipeline_config.json', help='配置文件路径')
-
     parser = argparse.ArgumentParser(description='生成HDF5数据集')
-    parser.add_argument('--h5_file', default='../../data/space.h5', help='原始HDF5文件路径')
-    parser.add_argument('--sample_index', default='../../data/sample_index.json', help='样本索引文件路径')
-    parser.add_argument('--split_name', default='train', help='数据集名称')
-    parser.add_argument('--output', default='../../data/train.h5', help='输出HDF5文件路径')
+    parser.add_argument('--h5_file', required=True, help='原始HDF5文件路径')
+    parser.add_argument('--sample_index', required=True, help='样本索引文件路径')
+    parser.add_argument('--split_name', required=True, choices=['train', 'val', 'test'], help='数据集名称')
+    parser.add_argument('--output', required=True, help='输出HDF5文件路径')
     parser.add_argument('--config', default='../config/pipeline_config.json', help='配置文件路径')
 
     args = parser.parse_args()
