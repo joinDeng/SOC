@@ -18,6 +18,8 @@ def main():
             if key not in ncf_ids:
                 ncf_ids.add(key)
     metrics = json.load(open(metrics_json))
+    print(f"[INFO] 空间目标共计 {len(metrics)} 个")
+    print(f"[INFO] 有NCF记录的目标 {len(ncf_ids)} 个")
 
     # 先清空has_ncf记录，再更新
     for m in metrics:

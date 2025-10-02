@@ -49,13 +49,15 @@ def main():
 
     grid_min = config.get('grid_min', 50)
     grid_max = config.get('grid_max', 500)
+    cat_reliability_threshold = config.get('cat_reliability_threshold', 0.6)
+    rcs_reliability_threshold = config.get('rcs_reliability_threshold', 0.6)
 
     # 加载metrics数据
     with open(args.metrics, 'r') as f:
         metrics = json.load(f)
 
     # 过滤掉没有ncf数据、cat和rcs可靠性较低的目标
-    metrics = [m for m in metrics if m.get('has_ncf') and m.get('cat_reliability') > 0.6 and m.get('rcs_reliability') > 0.6]
+    metrics = [m for m in metrics if m.get('has_ncf') and m.get('cat_reliability') > cat_reliability_threshold and m.get('rcs_reliability') > rcs_reliability_threshold]
 
     # 为每个目标计算轨道类型
     for m in metrics:

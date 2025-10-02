@@ -3,11 +3,13 @@
   "slide_step": 1440,
   "grid_min": 5,
   "grid_max": 50,
-  "augmentation_multiplier": 3,
+  "cat_reliability_threshold": 0.6,
+  "rcs_reliability_threshold": 0.6,
+  "augmentation_multiplier": 5,
   "time_boundaries": {
-    "train_end": 1664582400,
-    "val_end": 1668998400,
-    "test_end": 1672531200
+    "train_end": "2020-10-01 00:00:00",
+    "val_end": "2020-11-16 00:00:00",
+    "test_end": "2021-01-01 00:00:00"
   },
   "noise_level": 0.01,
   "compression": {

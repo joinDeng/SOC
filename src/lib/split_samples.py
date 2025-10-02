@@ -8,6 +8,7 @@ import json
 import argparse
 import h5py
 import numpy as np
+import pandas as pd
 
 
 def get_center_time(grp, start_idx, end_idx):
@@ -15,6 +16,11 @@ def get_center_time(grp, start_idx, end_idx):
     t_start = grp['t'][start_idx]
     t_end = grp['t'][end_idx - 1]
     return (t_start + t_end) / 2
+
+
+def utc_to_time_stamp(t):
+    """时间转换为 pandas 的 datetime 格式"""
+    return pd.to_datetime(t, format="%Y-%m-%d %H:%M:%S").timestamp()
 
 
 def main():
@@ -31,9 +37,12 @@ def main():
         config = json.load(f)
 
     time_boundaries = config.get('time_boundaries', {})
-    train_end = time_boundaries.get('train_end', 1664582400)    # 2022-10-01 00:00 UTC
-    val_end = time_boundaries.get('val_end', 1668998400)        # 2022-11-16 00:00 UTC
-    test_end = time_boundaries.get('test_end', 1672531200)      # 2023-01-01 00:00 UTC
+    train_end = time_boundaries.get('train_end', "2022-10-01 00:00:00")    # 2022-10-01 00:00 UTC
+    train_end = utc_to_time_stamp(train_end)
+    val_end = time_boundaries.get('val_end', "2022-11-16 00:00:00")        # 2022-11-16 00:00 UTC
+    val_end = utc_to_time_stamp(val_end)
+    test_end = time_boundaries.get('test_end', "2023-01-01 00:00:00")      # 2023-01-01 00:00 UTC
+    test_end = utc_to_time_stamp(test_end)
 
     # 加载样本索引
     with open(args.sample_index, 'r') as f:
