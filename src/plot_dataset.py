@@ -6,7 +6,12 @@
 一键绘制 selected 空间目标分布
 > python plot_dataset_dist.py --ids selected_ids.json --metrics space_object_metrics.json --out dist.pdf
 """
-import json, argparse, pandas as pd, seaborn as sns, matplotlib.pyplot as plt
+import h5py
+import json, argparse
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
 from collections import Counter
 from tqdm import tqdm
 
@@ -24,7 +29,7 @@ plt.rcParams.update({
     "ytick.labelsize": 18,
 })
 
-def main():
+def main_plot_dataset_dist():
     parser = argparse.ArgumentParser()
     parser.add_argument('--ids', default='../../../db/intermediate/selected_ids.json', help='selected_ids.json')
     parser.add_argument('--metrics', default='../../../db/space_object_metrics.json', help='space_object_metrics.json')
@@ -78,5 +83,79 @@ def main():
 
     print('==========  完成！ ==========')
 
+
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+画选中目标的时间序列长度分布
+> python plot_seq_length.py --ids selected_ids.json --h5 ncf_20220101-20230101.h5 --out len_dist.pdf
+"""
+
+def main_plot_seq_length():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--ids', default='../../../db/intermediate/selected_ids.json', help='selected_ids.json')
+    parser.add_argument('--h5', default='../../../db/ncf_20220101-20230101.h5', help='ncf_20220101-20230101.h5')
+    parser.add_argument('--out', default='../output/other/len_dist.pdf', help='输出高清 PDF')
+    args = parser.parse_args()
+
+    # 1. 读 ID 列表
+    ids = json.load(open(args.ids))
+    print(f'共 {len(ids)} 个选中目标')
+
+    # 2. 遍历 H5 统计长度
+    lengths = []
+    with h5py.File(args.h5, 'r') as f:
+        for nid in tqdm(ids, desc='统计长度'):
+            if nid not in f:
+                continue
+            L = f[nid]['t'].shape[0]   # 时间戳维度
+            lengths.append(L)
+    lengths = np.array(lengths)
+    print('========== 序列长度统计 ==========')
+    print(f'均值: {lengths.mean():.1f}')
+    print(f'中位数: {np.median(lengths):.0f}')
+    print(f'Q1: {np.percentile(lengths, 25):.0f}')
+    print(f'Q3: {np.percentile(lengths, 75):.0f}')
+    print(f'最小: {lengths.min()}')
+    print(f'最大: {lengths.max()}')
+
+    # 3. 画图（三图一页）
+    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+
+    # 直方图
+    ax = axes[0]
+    ax.hist(lengths, bins=50, color='skyblue', edgecolor='black')
+    ax.axvline(lengths.mean(), color='red', linestyle='--', label=f'Mean={lengths.mean():.0f}')
+    ax.axvline(np.median(lengths), color='orange', linestyle='--', label=f'Median={np.median(lengths):.0f}')
+    ax.set_xlabel('Sequence Length (steps)')
+    ax.set_ylabel('Count')
+    ax.set_title('Histogram')
+    ax.legend()
+
+    # 箱线图
+    ax = axes[1]
+    ax.boxplot(lengths, vert=True, patch_artist=True,
+               boxprops=dict(facecolor='lightblue'),
+               medianprops=dict(color='red'))
+    ax.set_ylabel('Length (steps)')
+    ax.set_title('Box Plot')
+
+    # 累计分布
+    ax = axes[2]
+    sorted_len = np.sort(lengths)
+    cum = np.arange(1, len(sorted_len)+1) / len(sorted_len)
+    ax.plot(sorted_len, cum, linewidth=2, color='darkgreen')
+    ax.axhline(0.5, color='gray', linestyle='--', alpha=0.7)
+    ax.axvline(np.median(lengths), color='red', linestyle='--', alpha=0.7)
+    ax.set_xlabel('Length (steps)')
+    ax.set_ylabel('Cumulative Probability')
+    ax.set_title('CDF')
+    ax.grid(alpha=0.3)
+
+    plt.tight_layout()
+    fig.savefig(args.out, dpi=300, bbox_inches='tight')
+    print(f'分布图已保存 → {args.out}')
+
 if __name__ == '__main__':
-    main()
+    main_plot_seq_length()
+    
