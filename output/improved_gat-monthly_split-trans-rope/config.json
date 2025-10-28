@@ -1,0 +1,22 @@
+{
+  "epochs": 100,
+  "batch_size": 16,
+  "lr": 0.0001,
+  "hidden_dim": 64,
+  "node_dim": 64,
+  "num_gat_layers": 1,
+  "num_heads": 8,
+  "drop_out": 0.3,
+  "window_size": 1440,
+  "subwindow_size": 256,
+  "stride": 128,
+  "graph_type": "temporal",
+  "patience": 15,
+  "gpu": 0,
+  "task_weights": "0.6,0.3,0.1",
+  "ncf_data": "../../../../db/ncf_20220101-20230101.h5",
+  "train_json": "../../../../db/intermediate/split_samples_monthly_train.json",
+  "val_json": "../../../../db/intermediate/split_samples_monthly_val.json",
+  "test_json": "../../../../db/intermediate/split_samples_monthly_test.json",
+  "save_dir": "../../output/improved_gat-monthly_split-trans-rope"
+}

@@ -1,0 +1,15 @@
+{
+  "epochs": 100,
+  "batch_size": 32,
+  "lr": 0.001,
+  "hidden_dim": 128,
+  "num_layers": 2,
+  "window_size": 1440,
+  "patience": 10,
+  "gpu": 0,
+  "task_weights": "0.6,0.3,0.1",
+  "train_hdf5": "../../../../db/output/train.h5",
+  "val_hdf5": "../../../../db/output/val.h5",
+  "test_hdf5": "../../../../db/output/test.h5",
+  "save_dir": "../../output/improved_lstm"
+}

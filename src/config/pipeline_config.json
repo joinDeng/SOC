@@ -1,12 +1,20 @@
 {
   "window_length": 1440,
   "slide_step": 1440,
-  "grid_min": 5,
-  "grid_max": 50,
-  "cat_reliability_threshold": 0.6,
-  "rcs_reliability_threshold": 0.6,
+  "grid_min": 2,
+  "grid_max": 2,
+  "cat_reliability_threshold": 0.8,
+  "rcs_reliability_threshold": 0.8,
   "augmentation_multiplier": 5,
-  "time_boundaries": {
+
+  "time_split_monthly": {
+    "train_days": 20,
+    "val_days": 5,
+    "test_days": 5,
+    "start_month": "2020-01",
+    "end_month": "2020-12"
+  },
+  "time_split_yearly": {
     "train_end": "2020-10-01 00:00:00",
     "val_end": "2020-11-16 00:00:00",
     "test_end": "2021-01-01 00:00:00"
