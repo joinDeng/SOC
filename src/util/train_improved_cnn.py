@@ -16,6 +16,8 @@ from space_dataset import SpaceDataset, collate_fn
 from improved_cnn import MultiTaskCNNClassifier, improved_collate_fn
 from collections import Counter
 from sklearn.metrics import classification_report, confusion_matrix
+
+from loss import FocalLoss, MultiTaskUncertaintyLoss
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -108,9 +110,12 @@ def run_epoch(loader, model, criterions, optimizer=None, device='cuda', task_wei
             loss_rcs = criterions['rcs'](outputs['rcs'], rcs_labels)
             loss_orbit = criterions['orbit'](outputs['orbit'], orbit_labels)
             
-            total_loss_batch = (task_weights['cat'] * loss_cat + 
-                              task_weights['rcs'] * loss_rcs + 
-                              task_weights['orbit'] * loss_orbit)
+            # total_loss_batch = (task_weights['cat'] * loss_cat + 
+            #                   task_weights['rcs'] * loss_rcs + 
+            #                   task_weights['orbit'] * loss_orbit)
+            uncertainty_w = MultiTaskUncertaintyLoss().to(device)
+            losses = {'cat': loss_cat, 'rcs': loss_rcs, 'orbit': loss_orbit}
+            total_loss_batch = uncertainty_w(losses)   # 或手工加权版本
             
             if is_train:
                 optimizer.zero_grad()
@@ -154,12 +159,12 @@ def main():
     parser.add_argument('--window_size', type=int, default=1440)
     parser.add_argument('--gpu', type=int, default=0)
     parser.add_argument('--patience', type=int, default=15)
-    parser.add_argument('--task_weights', type=str, default="1.0,0.5,0.1", 
+    parser.add_argument('--task_weights', type=str, default="0.6,0.3,0.1", 
                        help="任务权重: cat,rcs,orbit")
-    parser.add_argument("--train_hdf5", type=str, default='../../../../db/output/train.h5')
-    parser.add_argument("--val_hdf5", type=str, default='../../../../db/output/val.h5')
-    parser.add_argument("--test_hdf5", type=str, default='../../../../db/output/test.h5')
-    parser.add_argument("--save_dir", type=str, default="../../output/improved_cnn")
+    parser.add_argument("--train_hdf5", type=str, default='../../../../db/output/train_little_monthly.h5')
+    parser.add_argument("--val_hdf5", type=str, default='../../../../db/output/val_little_monthly.h5')
+    parser.add_argument("--test_hdf5", type=str, default='../../../../db/output/test_little_monthly.h5')
+    parser.add_argument("--save_dir", type=str, default="../../output/improved_cnn-monthly_split-little")
     
     args = parser.parse_args()
     
@@ -227,10 +232,15 @@ def main():
     print(f"模型参数数量: {sum(p.numel() for p in model.parameters()):,}")
     
     # 多任务损失函数
+    # criterions = {
+    #     'cat': nn.CrossEntropyLoss(weight=weights_cat),
+    #     'rcs': nn.CrossEntropyLoss(weight=weights_rcs),
+    #     'orbit': nn.CrossEntropyLoss(weight=weights_orbit)
+    # }
     criterions = {
-        'cat': nn.CrossEntropyLoss(weight=weights_cat),
-        'rcs': nn.CrossEntropyLoss(weight=weights_rcs),
-        'orbit': nn.CrossEntropyLoss(weight=weights_orbit)
+        'cat': FocalLoss(alpha=weights_cat, gamma=2.0).to(device),
+        'rcs': FocalLoss(alpha=weights_rcs, gamma=2.0).to(device),
+        'orbit': FocalLoss(alpha=weights_orbit, gamma=2.0).to(device)
     }
     
     # 优化器

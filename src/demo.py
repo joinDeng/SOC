@@ -7,3 +7,5 @@ y = np.array([data[xx] for xx in x])
 plt.pie(y, labels=x, autopct='%1.1f%%', explode=[0.01] * len(y), startangle=90)
 plt.title("The composition of different category in data")
 plt.show()
+
+
