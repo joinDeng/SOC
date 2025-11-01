@@ -17,7 +17,7 @@ from improved_cnn import MultiTaskCNNClassifier, improved_collate_fn
 from collections import Counter
 from sklearn.metrics import classification_report, confusion_matrix
 
-from loss import FocalLoss, MultiTaskUncertaintyLoss
+from loss import FocalLoss, MultiTaskUncertaintyLoss, calculate_class_weights
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -55,33 +55,6 @@ class EarlyStopping:
         torch.save(model.state_dict(), path)
         self.val_loss_min = val_loss
 
-def calculate_class_weights(dataset, target_type='cat'):
-    """计算类别权重"""
-    class_counts = Counter()
-    for i in range(len(dataset)):
-        sample = dataset[i]
-        if target_type == 'cat':
-            label = sample['grid']['final_cat']
-        elif target_type == 'rcs':
-            label = sample['grid']['final_rcs']
-        else:  # orbit
-            label = sample['grid']['orbit_class']
-        class_counts[label] += 1
-    # print(f"class_counts: {class_counts}")
-    
-    total_samples = sum(class_counts.values())
-    if target_type == 'cat':
-        classes = ['payload', 'rocket body', 'debris']
-    elif target_type == 'rcs':
-        classes = ['small', 'medium', 'large']
-    else:  # orbit
-        classes = ['LEO', 'MEO', 'HEO']
-    
-    weights = torch.tensor([
-        total_samples / class_counts[cls] for cls in classes
-    ], dtype=torch.float32)
-    
-    return weights / weights.sum()
 
 def run_epoch(loader, model, criterions, optimizer=None, device='cuda', task_weights=None):
     """运行一个epoch"""
@@ -277,11 +250,10 @@ def main():
         early_stopping(val_loss, model, f'{exp_dir}/checkpoints/best_cnn_model.pt')
         
         # 记录到TensorBoard
-        writer.add_scalar('Loss/train', train_loss, epoch)
-        writer.add_scalar('Loss/val', val_loss, epoch)
+        writer.add_scalar('Loss', {'train': train_loss, 'val': val_loss}, epoch)
         
         for task in ['cat', 'rcs', 'orbit']:
-            writer.add_scalars(f'Acc/{task}', {
+            writer.add_scalars(f'Accuracy/{task}', {
                 'train': train_accs[task],
                 'val': val_accs[task]
             }, epoch)
@@ -337,7 +309,7 @@ def main():
             
             for task in ['cat', 'rcs', 'orbit']:
                 preds = outputs[task].argmax(1).cpu().numpy()
-                labels = batch[f'labels_{task}'].numpy()
+                labels = batch[f'{task}_labels'].numpy()
                 all_predictions[task].extend(preds)
                 all_labels[task].extend(labels)
     

@@ -46,15 +46,19 @@ class SimpleSpectrumEncoder(nn.Module):
             for ch in range(channels):
                 signal = x_permuted[i, ch]  # [seq_len]
                 
-                # 计算STFT
-                stft_result = torch.stft(
-                    signal, n_fft=self.n_fft, hop_length=self.hop_length,
-                    window=torch.hann_window(self.n_fft).to(x.device),
-                    return_complex=True, center=False
-                )  # [freq_bins, time_frames]
+                # # 计算STFT
+                # stft_result = torch.stft(
+                #     signal, n_fft=self.n_fft, hop_length=self.hop_length,
+                #     window=torch.hann_window(self.n_fft).to(x.device),
+                #     return_complex=True, center=False
+                # )  # [freq_bins, time_frames]
                 
-                # 幅度谱
-                magnitude = torch.abs(stft_result)  # [freq_bins, time_frames]
+                # # 幅度谱
+                # magnitude = torch.abs(stft_result)  # [freq_bins, time_frames]
+
+                # 替换：减显存  计算STFT
+                fft = torch.fft.rfft(signal, n=self.n_fft)
+                magnitude = fft.abs() 
                 
                 # 时间维度平均，得到频率能量分布
                 freq_energy = magnitude.mean(dim=1)  # [freq_bins]
@@ -411,7 +415,7 @@ class SpectrumEnhancedGAT(nn.Module):
         )
         
         print(f"模型配置:")
-        print(f"  - 节点特征维度: {gat_input_dim} (时序: {temporal_dim} + 频谱: {spec_dim})")
+        print(f"  - 节点特征维度: {gat_input_dim} (时序: {temporal_dim} + 频谱: {spec_dim*2})")
         print(f"  - GAT隐藏层: {hidden_dim}, 头数: {gat_heads}, 层数: {gat_layers}")
         print(f"  - 融合方法: {fusion_method}")
         

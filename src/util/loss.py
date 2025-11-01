@@ -1,6 +1,7 @@
 import torch
 from torch.nn import CrossEntropyLoss
 import torch.nn.functional as F
+from collections import Counter
 
 class FocalLoss(torch.nn.Module):
     def __init__(self, alpha=None, gamma=2.0, reduction='mean'):
@@ -35,4 +36,30 @@ class MultiTaskUncertaintyLoss(torch.nn.Module):
             total += precision * loss + self.log_vars[name]
         return total
 
-        
+def calculate_class_weights(dataset, target_type='cat'):
+    """计算类别权重"""
+    class_counts = Counter()
+    for i in range(len(dataset)):
+        sample = dataset[i]
+        if target_type == 'cat':
+            label = sample['grid']['final_cat']
+        elif target_type == 'rcs':
+            label = sample['grid']['final_rcs']
+        else:  # orbit
+            label = sample['grid']['orbit_class']
+        class_counts[label] += 1
+    print(f"class_counts: {class_counts}")
+    
+    total_samples = sum(class_counts.values())
+    if target_type == 'cat':
+        classes = ['payload', 'rocket body', 'debris']
+    elif target_type == 'rcs':
+        classes = ['small', 'medium', 'large']
+    else:  # orbit
+        classes = ['LEO', 'MEO', 'HEO']
+    
+    weights = torch.tensor([
+        total_samples / class_counts[cls] for cls in classes
+    ], dtype=torch.float32)
+    
+    return weights / weights.sum()

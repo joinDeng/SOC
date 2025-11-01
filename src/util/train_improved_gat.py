@@ -9,7 +9,9 @@ import torch.nn.functional as F
 from torch.utils.tensorboard import SummaryWriter
 from torch_geometric.loader import DataLoader as PyG_DataLoader
 from datetime import datetime
+from collections import Counter
 
+from loss import FocalLoss, MultiTaskUncertaintyLoss
 from space_dataset_graph import SpaceGraphDataset, GraphNoiseTransform, EdgeDropTransform
 from improved_gat import ImprovedGATMultiTaskSinCosPE, ImprovedGATMultiTaskRoPE, register_nan_hook
 from trans_spec_gat import SpectrumEnhancedGAT
@@ -43,6 +45,37 @@ class MultiTaskLoss(nn.Module):
                 task_losses[task_name] = loss.item()
         
         return total_loss, task_losses
+
+def calculate_class_weights(dataset, target_type='cat'):
+    """计算类别权重"""
+    class_counts = Counter()
+    cat_label = {0: 'payload', 1: 'rocket body', 2: 'debris'}
+    rcs_label = {0: 'small', 1: 'medium', 2: 'large'}
+    orbit_label = {0: 'LEO', 1: 'MEO', 2: 'HEO'}
+    for i in range(len(dataset)):
+        sample = dataset[i]
+        if target_type == 'cat':
+            label = cat_label[int(sample.y_cat)]
+        elif target_type == 'rcs':
+            label = cat_label[int(sample.y_rcs)]
+        else:  # orbit
+            label = cat_label[int(sample.y_orbit)]
+        class_counts[label] += 1
+    print(f"class_counts: {class_counts}")
+    
+    total_samples = sum(class_counts.values())
+    if target_type == 'cat':
+        classes = ['payload', 'rocket body', 'debris']
+    elif target_type == 'rcs':
+        classes = ['small', 'medium', 'large']
+    else:  # orbit
+        classes = ['LEO', 'MEO', 'HEO']
+    
+    weights = torch.tensor([
+        total_samples / (class_counts[cls] + 1e-8) for cls in classes
+    ], dtype=torch.float32)
+    
+    return weights / weights.sum()
 
 class EarlyStopping:
     def __init__(self, patience=10, delta=0, checkpoint_dir='checkpoints'):
@@ -78,7 +111,7 @@ class EarlyStopping:
             'best_score': self.best_score
         }
         torch.save(checkpoint, os.path.join(self.checkpoint_dir, 'best_gat_model.pt'))
-        print(f'Checkpoint saved at epoch {epoch} with val_loss {val_loss:.4f}')
+        print(f'Checkpoint saved at epoch {epoch} with val_loss {val_loss.item():.4f}')
 
 def compute_metrics(outputs, targets, task_names):
     """计算多任务评估指标"""
@@ -113,7 +146,7 @@ def compute_metrics(outputs, targets, task_names):
     
     return metrics
 
-def train_epoch(model, dataloader, criterion, optimizer, device, scheduler=None):
+def train_epoch(model, dataloader, criterions, optimizer, device, scheduler=None):
     """训练一个epoch"""
     model.train()
     total_loss = 0.0
@@ -139,21 +172,45 @@ def train_epoch(model, dataloader, criterion, optimizer, device, scheduler=None)
         outputs = model(batch)
         
         # 计算损失
-        loss, batch_task_losses = criterion(outputs, targets)
+        # loss, batch_task_losses = criterions(outputs, targets)
+
+        # # 反向传播
+        # loss.backward()
+        # torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+        # optimizer.step()
+
+        # if scheduler:
+        #     scheduler.step()
         
+        # # 统计信息
+        # total_loss += loss.item()
+        # for task, task_loss in batch_task_losses.items():
+        #     task_losses[task] += task_loss
+
+        # 计算损失
+        cat_loss = criterions['cat'](outputs['cat'], targets['cat'])
+        rcs_loss = criterions['rcs'](outputs['rcs'], targets['rcs'])
+        orbit_loss = criterions['orbit'](outputs['orbit'], targets['orbit'])
+        
+        uncertainty_w = MultiTaskUncertaintyLoss().to(device)
+        losses = {'cat': cat_loss, 'rcs': rcs_loss, 'orbit': orbit_loss}
+        total_loss_batch = uncertainty_w(losses)   # 或手工加权版本
+
         # 反向传播
-        loss.backward()
+        total_loss_batch.backward()
         torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
         optimizer.step()
-        
+
         if scheduler:
             scheduler.step()
-        
+
         # 统计信息
-        total_loss += loss.item()
-        for task, task_loss in batch_task_losses.items():
-            task_losses[task] += task_loss
+        total_loss += total_loss_batch
+        task_losses['cat'] += cat_loss
+        task_losses['rcs'] += rcs_loss
+        task_losses['orbit'] += orbit_loss
         
+
         # 计算指标
         batch_metrics = compute_metrics(outputs, targets, ['cat', 'rcs', 'orbit'])
         for metric_name, metric_value in batch_metrics.items():
@@ -170,7 +227,7 @@ def train_epoch(model, dataloader, criterion, optimizer, device, scheduler=None)
     
     return avg_loss, task_losses, all_metrics
 
-def validate_epoch(model, dataloader, criterion, device):
+def validate_epoch(model, dataloader, criterions, device):
     """验证一个epoch"""
     model.eval()
     total_loss = 0.0
@@ -189,11 +246,27 @@ def validate_epoch(model, dataloader, criterion, device):
             }
             
             outputs = model(batch)
-            loss, batch_task_losses = criterion(outputs, targets)
+
+            # # 交叉熵损失函数
+            # loss, batch_task_losses = criterions(outputs, targets)
+            # total_loss += loss.item()
+            # for task, task_loss in batch_task_losses.items():
+            #     task_losses[task] += task_loss
+
+            # 焦点损失函数
+            cat_loss = criterions['cat'](outputs['cat'], targets['cat'])
+            rcs_loss = criterions['rcs'](outputs['rcs'], targets['rcs'])
+            orbit_loss = criterions['orbit'](outputs['orbit'], targets['orbit'])
             
-            total_loss += loss.item()
-            for task, task_loss in batch_task_losses.items():
-                task_losses[task] += task_loss
+            uncertainty_w = MultiTaskUncertaintyLoss().to(device)
+            losses = {'cat': cat_loss, 'rcs': rcs_loss, 'orbit': orbit_loss}
+            total_loss_batch = uncertainty_w(losses)   # 或手工加权版本
+
+            total_loss += total_loss_batch
+            task_losses['cat'] += cat_loss
+            task_losses['rcs'] += rcs_loss
+            task_losses['orbit'] += orbit_loss
+
             
             batch_metrics = compute_metrics(outputs, targets, ['cat', 'rcs', 'orbit'])
             for metric_name, metric_value in batch_metrics.items():
@@ -201,12 +274,12 @@ def validate_epoch(model, dataloader, criterion, device):
             
             num_batches += 1
     
-    avg_loss = total_loss / num_batches
-    for task in task_losses:
-        task_losses[task] /= num_batches
-    for metric_name in all_metrics:
-        all_metrics[metric_name] /= num_batches
-    
+        avg_loss = total_loss / num_batches
+        for task in task_losses:
+            task_losses[task] /= num_batches
+        for metric_name in all_metrics:
+            all_metrics[metric_name] /= num_batches
+
     return avg_loss, task_losses, all_metrics
 
 def main():
@@ -217,7 +290,7 @@ def main():
     parser.add_argument('--hidden_dim', type=int, default=64)
     parser.add_argument('--node_dim', type=int, default=64)
     parser.add_argument('--num_gat_layers', type=int, default=1)
-    parser.add_argument('--num_heads', type=int, default=8)
+    parser.add_argument('--num_heads', type=int, default=4)
     parser.add_argument('--drop_out', type=float, default=0.3)
     parser.add_argument('--window_size', type=int, default=1440)
     parser.add_argument('--subwindow_size', type=int, default=256)
@@ -229,10 +302,10 @@ def main():
     parser.add_argument('--task_weights', type=str, default="0.6,0.3,0.1", 
                         help="任务权重: cat,rcs,orbit")
     parser.add_argument("--ncf_data", type=str, default="../../../../db/ncf_20220101-20230101.h5")
-    parser.add_argument("--train_json", type=str, default='../../../../db/intermediate/split_samples_monthly_train.json')
-    parser.add_argument("--val_json", type=str, default='../../../../db/intermediate/split_samples_monthly_val.json')
-    parser.add_argument("--test_json", type=str, default='../../../../db/intermediate/split_samples_monthly_test.json')
-    parser.add_argument("--save_dir", type=str, default="../../output/improved_gat-monthly_split-trans_spec-sincos")
+    parser.add_argument("--train_json", type=str, default='../../../../db/intermediate/split_samples_little_monthly_train.json')
+    parser.add_argument("--val_json", type=str, default='../../../../db/intermediate/split_samples_little_monthly_val.json')
+    parser.add_argument("--test_json", type=str, default='../../../../db/intermediate/split_samples_little_monthly_test.json')
+    parser.add_argument("--save_dir", type=str, default="../../output/improved_gat-monthly_split-trans_spec-sincos-focalloss-little")
     
     args = parser.parse_args()
     
@@ -343,7 +416,22 @@ def main():
         'rcs': float(args.task_weights.split(',')[1]),
         'orbit': float(args.task_weights.split(',')[2])
     }
-    criterion = MultiTaskLoss(task_weights=task_weights, label_smoothing=0.1)
+
+    # criterions = MultiTaskLoss(task_weights=task_weights, label_smoothing=0.1)
+
+    # 计算类别权重
+    weights_cat = calculate_class_weights(train_ds, 'cat').to(device)
+    weights_rcs = calculate_class_weights(train_ds, 'rcs').to(device)
+    weights_orbit = calculate_class_weights(train_ds, 'orbit').to(device)
+
+    # 损失函数和优化器
+    criterions = {
+            'cat': FocalLoss(alpha=weights_cat, gamma=2.0).to(device),
+            'rcs': FocalLoss(alpha=weights_rcs, gamma=2.0).to(device),
+            'orbit': FocalLoss(alpha=weights_orbit, gamma=2.0).to(device)
+        }
+
+    
     
     optimizer = torch.optim.AdamW(
         model.parameters(), 
@@ -368,12 +456,12 @@ def main():
     for epoch in range(1, args.epochs + 1):
         # 训练
         train_loss, train_task_losses, train_metrics = train_epoch(
-            model, train_loader, criterion, optimizer, device, scheduler
+            model, train_loader, criterions, optimizer, device, scheduler
         )
         
         # 验证
         val_loss, val_task_losses, val_metrics = validate_epoch(
-            model, val_loader, criterion, device
+            model, val_loader, criterions, device
         )
         
         # 学习率调度
@@ -383,8 +471,7 @@ def main():
         early_stopping(val_loss, model, epoch)
         
         # 记录到tensorboard
-        writer.add_scalar('Loss/train', train_loss, epoch)
-        writer.add_scalar('Loss/val', val_loss, epoch)
+        writer.add_scalar('Loss', {'train': train_loss, 'val': val_loss}, epoch)
         
         for task in ['cat', 'rcs', 'orbit']:
             writer.add_scalars(f'Loss/{task}', {
@@ -406,7 +493,7 @@ def main():
         # 打印进度
         if epoch % 5 == 0 or epoch == 1:
             print(f'Epoch {epoch:03d}:')
-            print(f'  Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}')
+            print(f'  Train Loss: {train_loss.item():.4f}, Val Loss: {val_loss.item():.4f}')
             print(f'  Train Acc - cat: {train_metrics["cat_accuracy"]:.3f}, '
                   f'RCS: {train_metrics["rcs_accuracy"]:.3f}, '
                   f'Orbit: {train_metrics["orbit_accuracy"]:.3f}')
@@ -414,7 +501,10 @@ def main():
                   f'RCS: {val_metrics["rcs_accuracy"]:.3f}, '
                   f'Orbit: {val_metrics["orbit_accuracy"]:.3f}')
             print(f'  Learning Rate: {optimizer.param_groups[0]["lr"]:.2e}')
-        
+
+        if epoch % 10 == 0:
+            print(torch.cuda.memory_summary(device, abbreviated=True))
+
         if early_stopping.early_stop:
             print("早停触发!")
             break
@@ -425,11 +515,11 @@ def main():
     # 加载最佳模型进行测试
     checkpoint = torch.load(os.path.join(exp_dir, 'checkpoints', 'best_gat_model.pt'))
     model.load_state_dict(checkpoint['model_state_dict'])
-    print(f"加载最佳模型 (epoch {checkpoint['epoch']}, val_loss {checkpoint['val_loss']:.4f})")
+    print(f"加载最佳模型 (epoch {checkpoint['epoch']}, val_loss {checkpoint['val_loss'].item():.4f})")
     
     # 测试
     test_loss, test_task_losses, test_metrics = validate_epoch(
-        model, test_loader, criterion, device
+        model, test_loader, criterions, device
     )
     
     print("\n测试结果:")
